@@ -1,0 +1,5 @@
+# dependencies
+/node_modules
+
+#mockdata
+/json_data
