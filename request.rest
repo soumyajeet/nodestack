@@ -1,0 +1,29 @@
+GET http://localhost:8083/api/userinfo
+
+###
+
+POST http://localhost:8083/api/registration
+Content-Type: application/json
+
+{
+        "email": "inboxofsoumyajit@hotmail.com",
+        "firstname": "Soumyajit",
+        "lastname": "Mondal",
+        "password": "Admin@123"
+}
+
+###
+
+
+PUT http://localhost:8083/api/userupdate/sahmen@gmail.com
+Content-Type: application/json
+
+{
+        "firstname": "Sammy",
+        "lastname": "Gibson",
+        "password": "Admin@123"
+}
+
+###
+
+GET http://localhost:8083/api/send

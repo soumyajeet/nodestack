@@ -1,28 +1,14 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const MongoClient = require('mongodb').MongoClient;
-const OPTS = { useNewUrlParser: true };
-const bodyParser= require('body-parser');
-
-
-DB_URI = "mongodb+srv://sam:sam@321@terracotta.u65dd.mongodb.net/sampledata";
-
-
-const userRouter = require('./routes/userRoutes.js');
-const productRouter = require('./routes/productRoutes.js');
-
 const app = express();
-app.use(express.json()); // Make sure it comes back as json
+const server = require('http').createServer(app);
+const WebSocket = require('ws');
 
+const wss = new WebSocket.Server({server});
 
-mongoose.connect(DB_URI, OPTS, function(err, db) {
-    if (err) { return console.error('failed');}
-});
+app.use('/api',require('./index'));
 
-app.use('/getuserdetails', userRouter);
-app.use('/getproductdetails', productRouter);
+const PORT = process.env.PORT || 8083;
 
-app.listen(3000, () => { 
-    
-    console.log('Server is running...') 
-});
+app.listen(PORT, 
+    console.log(`Server is running on ${PORT}`)
+);
