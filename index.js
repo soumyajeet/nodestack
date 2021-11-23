@@ -17,9 +17,11 @@ mongoose.connect(DB_URI, OPTS, function(err, db) {
 const productsRouter = require('./products/productsRoutes.js');
 const loginRouter = require('./users/userRoutes.js');
 const bannerRouter = require('./banners/bannerRoutes.js');
+const reviewsRouter = require('./reviews/reviewRoutes.js');
 
 router.use(productsRouter);
 router.use(loginRouter);
 router.use(bannerRouter);
+router.use(reviewsRouter);
 
 module.exports = router;

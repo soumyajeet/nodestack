@@ -11,7 +11,8 @@ const ProductsSchema = new mongoose.Schema({
     features: [String],
     productAffiliateUrl : String,
     productImgUrl : String,
-    rating: Number
+    rating: Number,
+    userReviews: []
 });
 
 const Products = mongoose.model("ProductsInfo", ProductsSchema, "allproducts");

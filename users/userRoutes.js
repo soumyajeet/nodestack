@@ -12,7 +12,7 @@ const jwt = require('jsonwebtoken');
 
 var smtpTransport = nodemailer.createTransport({
   host: "mail.digismartautomate.com",
-  port: 26,
+  port: 465,
   secure: false,
   auth: {
     user: "support@digismartautomate.com",

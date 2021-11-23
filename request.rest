@@ -2,6 +2,15 @@ GET http://localhost:8083/api/userinfo
 
 ###
 
+POST http://localhost:8083/api/userprofile
+Content-Type: application/json
+
+{
+        "emailid": "sendtosoumyajit@gmail.com"
+}
+
+###
+
 POST http://localhost:8083/api/registration
 Content-Type: application/json
 
@@ -27,3 +36,16 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8083/api/send
+
+###
+
+POST http://localhost:8083/api/postreviews
+Content-Type: application/json
+
+{
+        "username": "Soumyajit Mondal",
+        "reviews": "Good Product",
+        "ratings": "4",
+        "reviewStatus": false
+}
+
