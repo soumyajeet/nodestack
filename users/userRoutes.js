@@ -10,6 +10,14 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 
 
+userapp.use(
+  cors({
+    origin: '*',
+    methods: ['GET','POST','PUT','PATCH','DELETE']
+  })
+)
+
+
 var smtpTransport = nodemailer.createTransport({
   host: "mail.digismartautomate.com",
   port: 465,
@@ -113,7 +121,7 @@ userapp.post('/registration',
 
             var mailOptions = {
               to: req.body.email,
-              subject: "Registration Successful For Mega Digital Mart",
+              subject: `Registration Successful For Mega Digital Mart`,
               text: `Hello ${userinfo.fullname}, Welcome to Mega Digital Mart.`
             }
 

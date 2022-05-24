@@ -8,7 +8,7 @@ const bannerModel = require('./bannerModels');
 bannersApp.get('/allbanners', async (req, res) => {
         
   const banners = await bannerModel.find({
-      "status": "live"
+      "status": "active"
   });
 
   try {

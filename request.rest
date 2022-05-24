@@ -2,6 +2,21 @@ GET http://localhost:8083/api/userinfo
 
 ###
 
+GET http://localhost:8083/api/productsinfo/security
+
+###
+
+POST http://localhost:8083/api/login
+Content-Type: application/json
+
+{
+        "emailid": "sendtosoumyajit@gmail.com",
+        "password": "admin@123"
+}
+
+
+###
+
 POST http://localhost:8083/api/userprofile
 Content-Type: application/json
 
@@ -43,7 +58,7 @@ POST http://localhost:8083/api/postreviews
 Content-Type: application/json
 
 {
-        "username": "Soumyajit Mondal",
+        "username": "Hridya Mondal",
         "reviews": "Good Product",
         "ratings": "4",
         "reviewStatus": false
